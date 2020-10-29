@@ -27,7 +27,7 @@
           <q-list>
 
             <template v-for="(menuItem, index) in menuList">
-              <q-item :key="index" clickable :active="menuItem.label === 'Outbox'" v-ripple>
+              <q-item :key="index" clickable :to="menuItem.to" exact v-ripple>
                 <q-item-section avatar>
                   <q-icon :name="menuItem.icon" />
                 </q-item-section>
@@ -61,10 +61,17 @@ export default {
       },
       {
         icon: 'work',
-        to: '/',
+        to: '/Rhymes',
         label: 'Projects'
       }]
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .q-router-link--active {
+    color: white;
+    font-size: 1.5em;
+  }
+</style>
