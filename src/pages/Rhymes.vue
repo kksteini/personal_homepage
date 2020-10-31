@@ -1,9 +1,12 @@
 <template>
-  <q-page class="flex flex-center">
-    <div class="column">
-      <q-input bottom-slots v-model="text" label="Rhymes" @keyup.enter="updateRhymes(text)">
+    <div class="column q-pa-xl">
+      <div class="text-h4 text-center q-pt-lg" v-if="halfrim">
+        Engin alrím fundust, sýni hálfrím
+      </div>
+
+      <q-input class="col" v-model="text" label="Rhymes" @keyup.enter="updateRhymes(text)">
         <template v-slot:append>
-          <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
+          <q-icon v-if="text !== ''" name="close" @click="text = ''; resetState()" class="cursor-pointer" />
         </template>
 
         <template v-slot:after>
@@ -11,13 +14,23 @@
         </template>
       </q-input>
 
-      <div class="column">
-        <div class="col-3 text-h5" v-for="item in rhymes" :key="item">
-          {{ item }}
+      <div class="row justify-center">
+        <q-spinner v-if="loading"
+          class="q-mt-xl"
+          color="white"
+          size="4.5em"
+        />
+      </div>
+
+      <div v-for="(items, syllables) in rhymes" :key=syllables>
+        <div class="text-h2 text-center q-pt-xl"> {{ syllables }} sérhljóðar</div>
+        <div class="row justify-center">
+          <div class="col-md-auto q-pa-xs text-h5" v-for="item in items" :key="item">
+            {{ item }}
+          </div>
         </div>
       </div>
    </div>
- </q-page>
 </template>
 
 <script>
@@ -27,12 +40,29 @@ export default {
   data() {
     return {
       rhymes: [],
-      text: ''
+      text: '',
+      loading: false,
+      halfrim: false
     }
   },
   methods: {
     async updateRhymes(word) {
-      this.rhymes = await getRhymes(word)
+      this.loading = true
+      var rhymes = await getRhymes(word)
+
+      if (Object.keys(rhymes).includes('Hálfrím')) {
+        this.halfrim = true
+        delete rhymes.Hálfrím
+      }
+      this.rhymes = rhymes
+
+      this.loading = false
+    },
+    resetState() {
+      this.rhymes = []
+      this.text = ''
+      this.loading = false
+      this.halfrim = false
     }
   }
 }
