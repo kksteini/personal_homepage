@@ -57,11 +57,9 @@ export default {
       this.nores = rhymes === 'Engar niðurstöður'
 
       if(Object.keys(rhymes).includes('Hálfrím')) {
-        console.log('Escsue the fuck me?')
         this.halfrim = rhymes.Hálfrím
         delete rhymes.Hálfrím
       } else {
-        console.log('Escsue me?')
         this.halfrim = false
       }
       this.rhymes = rhymes
