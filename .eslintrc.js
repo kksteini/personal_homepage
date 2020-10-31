@@ -55,6 +55,7 @@ module.exports = {
     'arrow-parens': 'off',
     'one-var': 'off',
     'space-before-function-paren' : 'off',
+    'keyword-spacing' : { 'after' : false},
 
     'import/first': 'off',
     'import/named': 'error',
