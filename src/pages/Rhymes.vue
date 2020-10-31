@@ -22,11 +22,11 @@
         />
       </div>
 
-      <div class="text-h4 text-center" v-if="nores">
-        Engar niðurstöður fyrir {{ text }}
+      <div class="text-h4 text-center q-pt-md" v-if="nores">
+        Engar niðurstöður
       </div>
 
-      <div v-for="(items, syllables) in rhymes" :key=syllables>
+      <div v-else v-for="(items, syllables) in rhymes" :key=syllables>
         <div class="text-h2 text-center q-pt-xl"> {{ syllables }} sérhljóð{{syllables == 1 ? 'i' : 'ar'}}</div>
         <div class="row justify-center">
           <div class="col-md-auto q-pa-xs text-h5" v-for="item in items" :key="item">
@@ -57,8 +57,12 @@ export default {
       this.nores = rhymes === 'Engar niðurstöður'
 
       if(Object.keys(rhymes).includes('Hálfrím')) {
+        console.log('Escsue the fuck me?')
         this.halfrim = rhymes.Hálfrím
         delete rhymes.Hálfrím
+      } else {
+        console.log('Escsue me?')
+        this.halfrim = false
       }
       this.rhymes = rhymes
 
