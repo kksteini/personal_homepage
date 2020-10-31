@@ -22,8 +22,12 @@
         />
       </div>
 
+      <div class="text-h4 text-center" v-if="nores">
+        Engar niðurstöður fyrir {{ text }}
+      </div>
+
       <div v-for="(items, syllables) in rhymes" :key=syllables>
-        <div class="text-h2 text-center q-pt-xl"> {{ syllables }} sérhljóðar</div>
+        <div class="text-h2 text-center q-pt-xl"> {{ syllables }} sérhljóð{{syllables == 1 ? 'i' : 'ar'}}</div>
         <div class="row justify-center">
           <div class="col-md-auto q-pa-xs text-h5" v-for="item in items" :key="item">
             {{ item }}
@@ -42,7 +46,8 @@ export default {
       rhymes: [],
       text: '',
       loading: false,
-      halfrim: false
+      halfrim: false,
+      nores: false
     }
   },
   methods: {
@@ -50,8 +55,12 @@ export default {
       this.loading = true
       var rhymes = await getRhymes(word)
 
+      if(rhymes === 'Engar niðurstöður') {
+
+      }
+
       if (Object.keys(rhymes).includes('Hálfrím')) {
-        this.halfrim = true
+        this.halfrim = rhymes.Hálfrím
         delete rhymes.Hálfrím
       }
       this.rhymes = rhymes
