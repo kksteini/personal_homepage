@@ -54,10 +54,7 @@ export default {
     async updateRhymes(word) {
       this.loading = true
       var rhymes = await getRhymes(word)
-
-      if(rhymes === 'Engar niðurstöður') {
-
-      }
+      this.nores = rhymes === "Engar niðurstöður"
 
       if (Object.keys(rhymes).includes('Hálfrím')) {
         this.halfrim = rhymes.Hálfrím
