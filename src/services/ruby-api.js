@@ -7,8 +7,8 @@ function afetch(route) {
   return response
 }
 
-function getRhymes() {
-  return afetch('/rhymes')
+function getRhymes(word) {
+  return afetch(`/rhymes/${word}`)
 }
 
 export {
