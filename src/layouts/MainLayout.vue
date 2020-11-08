@@ -10,11 +10,6 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-
-        <q-toolbar-title>
-          Þorsteinn Sævar Kristjánsson
-        </q-toolbar-title>
-
       </q-toolbar>
     </q-header>
 
@@ -23,23 +18,28 @@
       show-if-above
       bordered
     >
-    <q-scroll-area class="fit">
-          <q-list>
+      <q-img class="absolute-top" src="../assets/profile.jpg" style="height: 350px">
+        <div class="absolute-bottom bg-transparent">
+          <div class="text-weight-bold">Þorsteinn Sævar</div>
+          <div>kjaftfor@kurte.is</div>
+        </div>
+      </q-img>
 
-            <template v-for="(menuItem, index) in menuList">
-              <q-item :key="index" clickable :to="menuItem.to" exact v-ripple>
-                <q-item-section avatar>
-                  <q-icon :name="menuItem.icon" />
-                </q-item-section>
-                <q-item-section>
-                  {{ menuItem.label }}
-                </q-item-section>
-              </q-item>
-              <q-separator :key="'sep' + index"  v-if="menuItem.separator" />
-            </template>
-
-          </q-list>
-        </q-scroll-area>
+      <q-scroll-area class="repositioned">
+        <q-list>
+          <template v-for="(menuItem, index) in menuList">
+            <q-item :key="index" clickable :to="menuItem.to" exact v-ripple>
+              <q-item-section avatar>
+                <q-icon :name="menuItem.icon" />
+              </q-item-section>
+              <q-item-section>
+                {{ menuItem.label }}
+              </q-item-section>
+            </q-item>
+            <q-separator :key="'sep' + index"  v-if="menuItem.separator" />
+          </template>
+        </q-list>
+      </q-scroll-area>
     </q-drawer>
 
     <q-page-container>
@@ -73,5 +73,10 @@ export default {
   .q-router-link--active {
     color: white;
     font-size: 1.5em;
+  }
+
+  .repositioned {
+    height: calc(100% - 400px);
+    margin-top: 400px;
   }
 </style>

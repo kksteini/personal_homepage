@@ -4,7 +4,7 @@
         Engin alrím fundust, sýni hálfrím
       </div>
 
-      <q-input class="col" v-model="text" label="Rhymes" @keyup.enter="updateRhymes(text)">
+      <q-input class="col rhyme-input" v-model="text" label="Rímorð" @keyup.enter="updateRhymes(text)">
         <template v-slot:append>
           <q-icon v-if="text !== ''" name="close" @click="text = ''; resetState()" class="cursor-pointer" />
         </template>
@@ -75,3 +75,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .rhyme-input {
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 1.75em;
+  }
+</style>
