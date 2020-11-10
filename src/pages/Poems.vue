@@ -9,10 +9,18 @@
         </div>
         <div class="row justify-center">
             <div class="column">
-                <div class="text-h4" v-for="sentence in poem" :key="sentence">
-                    {{ sentence }}
+                <div v-for="sentence in poem" :key="sentence">
+                    <div class="text-h5 lt-md">
+                        {{ sentence }}
+                    </div>
+                    <div class="text-h4 md">
+                        {{ sentence }}
+                    </div>
+                    <div class="text-h2 gt-md">
+                        {{ sentence }}
+                    </div>
                 </div>
-            </div>
+           </div>
         </div>
         <div class="row justify-center q-mt-xl">
             <q-btn color="primary" @click="fetchPoem">
