@@ -27,6 +27,18 @@
                 Nýtt ljóð
             </q-btn>
         </div>
+        <div class="row justify-around q-mt-xl">
+            <q-slider
+              class="slider"
+              v-model="slider"
+              :min="4"
+              :max="20"
+              :step="1"
+              :label-value="slider + 'sérhljóðar'"
+              label
+              color="secondary"
+            />
+        </div>
     </div>
 </template>
 
@@ -37,7 +49,8 @@ export default {
   name: 'Poems',
   data() {
     return {
-      poem: []
+      poem: [],
+      slider: 7
     }
   },
   created() {
@@ -46,8 +59,14 @@ export default {
   methods: {
     async fetchPoem() {
       this.poem = []
-      this.poem = await getPoem()
+      this.poem = await getPoem(this.slider)
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .slider {
+    max-width: 40%;
+  }
+</style>

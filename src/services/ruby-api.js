@@ -11,8 +11,8 @@ function getRhymes(word) {
   return afetch(`/rhymes/${word}`)
 }
 
-function getPoem() {
-  return afetch('/poems/poem/')
+function getPoem(syllables) {
+  return afetch(`/poems/poem/${syllables}`)
 }
 
 export {
