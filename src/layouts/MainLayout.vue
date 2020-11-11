@@ -62,8 +62,14 @@ export default {
       {
         icon: 'work',
         to: '/Rhymes',
-        label: 'Projects'
-      }]
+        label: 'Rhyming Dictionary'
+      },
+      {
+        icon: 'book',
+        to: '/Poems',
+        label: 'Poem Generator'
+      }
+      ]
     }
   }
 }
