@@ -1,5 +1,5 @@
-const base = 'http://kaffi.life/api'
-// const base = 'http://localhost:4567'
+// const base = 'http://kaffi.life/api'
+const base = 'http://localhost:4567'
 
 function afetch(route) {
   const response = fetch(`${base}${route}`)
@@ -15,7 +15,12 @@ function getPoem(syllables) {
   return afetch(`/poems/poem/${syllables}`)
 }
 
+function getHaiku() {
+  return afetch('/poems/haiku')
+}
+
 export {
   getRhymes,
-  getPoem
+  getPoem,
+  getHaiku
 }

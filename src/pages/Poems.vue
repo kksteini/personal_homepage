@@ -22,19 +22,31 @@
                 </div>
            </div>
         </div>
-        <div class="row justify-center q-mt-xl">
-            <q-btn color="primary" @click="fetchPoem">
-                Nýtt ljóð
-            </q-btn>
-        </div>
-        <div class="row justify-around q-mt-xl">
+        <div class="column items-center q-mt-xl">
+            <div class="col">
+              <q-btn color="primary" @click="fetchPoem">
+                  Nýtt ljóð
+              </q-btn>
+            </div>
+            <div class="col q-mt-lg">
+              <q-btn-toggle
+                v-model="selection"
+                toggle-color="secondary"
+                :options="[
+                  {label: 'Jöfn ferskeytla', value: 'jafn'},
+                  {label: 'Haiku', value: 'haiku'},
+                ]"
+              />
+            </div>
+       </div>
+        <div class="row justify-around q-mt-xl" v-if="selection == 'jafn'">
             <q-slider
               class="slider"
               v-model="slider"
               :min="4"
               :max="20"
               :step="1"
-              :label-value="slider + 'sérhljóðar'"
+              :label-value="slider + ' atkvæði'"
               label
               color="secondary"
             />
@@ -43,14 +55,15 @@
 </template>
 
 <script>
-import { getPoem } from '../services/ruby-api'
+import { getPoem, getHaiku } from '../services/ruby-api'
 export default {
 
   name: 'Poems',
   data() {
     return {
       poem: [],
-      slider: 7
+      slider: 7,
+      selection: 'jafn'
     }
   },
   created() {
@@ -59,7 +72,12 @@ export default {
   methods: {
     async fetchPoem() {
       this.poem = []
-      this.poem = await getPoem(this.slider)
+
+      if(this.selection === 'jafn') {
+        this.poem = await getPoem(this.slider)
+      } else if(this.selection === 'haiku') {
+        this.poem = await getHaiku()
+      }
     }
   }
 }
