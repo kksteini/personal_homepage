@@ -79,6 +79,12 @@ export default {
         this.poem = await getHaiku()
       }
     }
+  },
+  watch: {
+    selection: function (old, select) {
+      this.poem = []
+      this.fetchPoem()
+    }
   }
 }
 </script>
