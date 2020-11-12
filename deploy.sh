@@ -9,5 +9,5 @@ cp -r ./dist ~/ssr-server/
 cd ~/ssr-server/dist/ssr/
 npm i
 
-pm2 stop --name Homepage
-pm2 start ~/ssr-server/dist/ssr/index.js --name Homepage
+pm2 stop Homepage
+pm2 start ~/ssr-server/dist/ssr/index.js --name Homepage || pm2 restart Homepage
