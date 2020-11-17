@@ -10,8 +10,14 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-      </q-toolbar>
-    </q-header>
+        <q-toolbar-title/>
+        <div>
+          <q-btn flat @click="setLang('is')">IS</q-btn>
+          <q-btn flat @click="setLang('en')">EN</q-btn>
+        </div>
+     </q-toolbar>
+
+   </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -33,7 +39,7 @@
                 <q-icon :name="menuItem.icon" />
               </q-item-section>
               <q-item-section>
-                {{ menuItem.label }}
+                {{ $t(menuItem.label) }}
               </q-item-section>
             </q-item>
             <q-separator :key="'sep' + index"  v-if="menuItem.separator" />
@@ -57,19 +63,33 @@ export default {
       menuList: [{
         icon: 'home',
         to: '/',
-        label: 'Home'
+        label: 'home'
       },
       {
         icon: 'work',
         to: '/Rhymes',
-        label: 'Rhyming Dictionary'
+        label: 'rhymingDictionary.title'
       },
       {
         icon: 'book',
         to: '/Poems',
-        label: 'Poem Generator'
+        label: 'poemGenerator.title'
       }
-      ]
+      ],
+      lang: this.$i18n.locale
+    }
+  },
+  watch: {
+    lang(lang) {
+      this.$i18n.locale = lang
+      // import(`quasar/lang/${lang}`).then(language => {
+      //   this.$q.lang.set(language.default)
+      // })
+    }
+  },
+  methods: {
+    setLang(language) {
+      this.lang = language
     }
   }
 }

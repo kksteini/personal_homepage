@@ -25,7 +25,7 @@
         <div class="column items-center q-mt-xl">
             <div class="col">
               <q-btn color="primary" @click="fetchPoem">
-                  Nýtt ljóð
+                  {{ $t('poemGenerator.new') }}
               </q-btn>
             </div>
             <div class="col q-mt-lg">
@@ -33,7 +33,7 @@
                 v-model="selection"
                 toggle-color="secondary"
                 :options="[
-                  {label: 'Jöfn ferskeytla', value: 'jafn'},
+                  {label: $t('poemGenerator.four'), value: 'jafn'},
                   {label: 'Haiku', value: 'haiku'},
                 ]"
               />
@@ -46,7 +46,7 @@
               :min="4"
               :max="20"
               :step="1"
-              :label-value="slider + ' atkvæði'"
+              :label-value="slider + ' ' + $t('poemGenerator.syllables')"
               label
               color="secondary"
             />
