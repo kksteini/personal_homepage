@@ -24,12 +24,12 @@ export default {
       }
     },
     work: {
-      title: 'Atvinnureynsla',
+      title: 'Reynsla',
 
       showdeck: {
         title: 'Full Stack Developer hjá Showdeck',
-        year: 'Juní 2020 - September 2020',
-        body: 'Skrifaði NodeJS og Django server kóða. Setti upp og viðhélt GraphQL sem gagnaflutningslag milli bakendanna. Viðhélt og útfærði Vue framenda sem átti samskipti við GraphQL. Setti upp tréstrúktúr fyrir vensluð gögn sem leyfði endurkvæmar gagnaskilgreiningar'
+        year: 'Júní 2020 - September 2020',
+        body: 'Skrifaði NodeJS og Django server kóða. Setti upp og viðhélt GraphQL sem gagnaflutningslagi á milli bakendanna. Viðhélt og útfærði Vue framenda sem átti samskipti við GraphQL. Setti upp tréstrúktúr fyrir vensluð gögn sem leyfði endurkvæmar gagnaskilgreiningar'
       },
 
       assistant: {
