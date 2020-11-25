@@ -24,7 +24,7 @@
       show-if-above
       bordered
     >
-      <q-img class="absolute-top" src="../assets/profile.jpg" style="height: 350px">
+      <q-img class="profile-img absolute-top" src="../assets/profile.jpg">
         <div class="absolute-bottom bg-transparent">
           <div class="text-weight-bold">Þorsteinn Sævar</div>
           <div>kjaftfor@kurte.is</div>
@@ -34,7 +34,7 @@
       <q-scroll-area class="repositioned">
         <q-list>
           <template v-for="(menuItem, index) in menuList">
-            <q-item :key="index" clickable :to="menuItem.to" exact v-ripple>
+            <q-item v-if="!menuItem.separator" :key="index" clickable :to="menuItem.to" exact v-ripple>
               <q-item-section avatar>
                 <q-icon :name="menuItem.icon" />
               </q-item-section>
@@ -42,7 +42,7 @@
                 {{ $t(menuItem.label) }}
               </q-item-section>
             </q-item>
-            <q-separator :key="'sep' + index"  v-if="menuItem.separator" />
+            <q-separator :key="'sep' + index"  v-else />
           </template>
         </q-list>
       </q-scroll-area>
@@ -64,6 +64,9 @@ export default {
         icon: 'home',
         to: '/',
         label: 'home'
+      },
+      {
+        separator: true
       },
       {
         icon: 'work',
@@ -104,5 +107,9 @@ export default {
   .repositioned {
     height: calc(100% - 400px);
     margin-top: 400px;
+  }
+
+  .profile-img {
+    height: 350px;
   }
 </style>
