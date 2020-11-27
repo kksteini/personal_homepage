@@ -42,8 +42,8 @@
       </div>
 
       <div v-else v-for="sentence in grams" :key=sentence>
-        <div class="row justify-center">
-          <div class="col-md-auto q-pa-xs text-h5">
+        <div class="row justify-center q-pb-xs">
+          <div class="col-md-auto text-h5">
             {{ sentence.join(" ") }}
           </div>
         </div>
