@@ -19,7 +19,7 @@
         </q-card>
       </q-dialog>
 
-      <q-input class="col rhyme-input" v-model="text" :label="$t('anagrams.query')" @keyup.enter="updateGrams(text)" maxlength="30">
+      <q-input class="col anagram-input" v-model="text" :label="$t('anagrams.query')" @keyup.enter="updateGrams(text)" maxlength="30">
         <template v-slot:append>
           <q-icon v-if="text !== ''" name="close" @click="text = ''; resetState()" class="cursor-pointer" />
         </template>
@@ -104,9 +104,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .rhyme-input {
-    margin-right: 25%;
-    margin-left: 25%;
+  @media (min-width: 1200px) {
+    .anagram-input {
+      margin-right: 25%;
+      margin-left: 25%;
+    }
+  }
+
+  .anagram-input {
     font-size: 1.75em;
   }
 

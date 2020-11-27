@@ -62,6 +62,8 @@ export default {
   anagrams: {
     title: 'Anagrams',
     nores: 'No results',
-    query: 'Find anagrams for...'
+    query: 'Find anagrams for...',
+    aboutTitle: 'About anagrams',
+    about: 'Write a sentence, max 30 characters long. The program will attempt to create new sentences that contain all the same letters. The search space becomes large quickly and therefore the program handles results in a random manner. This means that you can try again for the same sentence and get different results.'
   }
 }

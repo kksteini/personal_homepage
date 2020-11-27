@@ -77,9 +77,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (min-width: 1200px) {
+    .rhyme-input {
+      margin-right: 25%;
+      margin-left: 25%;
+    }
+  }
+
   .rhyme-input {
-    margin-right: 25%;
-    margin-left: 25%;
     font-size: 1.75em;
   }
 </style>
