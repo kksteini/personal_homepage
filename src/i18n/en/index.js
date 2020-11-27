@@ -50,7 +50,18 @@ export default {
   },
 
   rhymingDictionary: {
-    title: 'Rhyming dictionary'
-  }
+    title: 'Rhyming dictionary',
+    noComplete: 'No complete rhymes found, showing half-rhymes',
+    noResults: 'No results',
+    rhymeQuery: 'Rhyme query',
+    syllabl: 'syllable',
+    plur: 's',
+    sing: ''
+  },
 
+  anagrams: {
+    title: 'Anagrams',
+    nores: 'No results',
+    query: 'Find anagrams for...'
+  }
 }

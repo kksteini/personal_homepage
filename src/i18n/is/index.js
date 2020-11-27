@@ -23,6 +23,7 @@ export default {
         body: 'Stúdentspróf í raungreinum með áherslu á stærðfræði'
       }
     },
+
     work: {
       title: 'Reynsla',
 
@@ -44,10 +45,25 @@ export default {
     title: 'Ljóðaskapari',
     new: 'Nýtt ljóð',
     four: 'Jöfn ferskeytla',
+    haiku: 'Haiku',
     syllables: 'atkvæði'
   },
 
   rhymingDictionary: {
-    title: 'Rímorðabók'
+    title: 'Rímorðabók',
+    noComplete: 'Engin alrím fundust, sýni hálfrím',
+    noResults: 'Engar niðurstöður',
+    rhymeQuery: 'Rímorð',
+    syllabl: 'sérhljóð',
+    plur: 'ar',
+    sing: 'i'
+  },
+
+  anagrams: {
+    title: 'Endurumraðanir',
+    nores: 'Engar niðurstöður',
+    query: 'Finna endurumraðanir fyrir...',
+    aboutTitle: 'Um endurumraðanir',
+    about: 'Skrifaðu inn setningu að hámarki 30 stafir að lengd. Forritið mun reyna að búa til nýjar setningar sem innihalda alla sömu stafina. Útkomurými er stórt og þess vegna ræðst forritið á vandamálið á handahófskenndan máta. Hægt er að prófa aftur fyrir sömu setningu og fá mismunandi reiknaðar niðurstöður.'
   }
 }

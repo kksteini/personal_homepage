@@ -61,7 +61,7 @@ export default {
     return {
       leftDrawerOpen: false,
       menuList: [{
-        icon: 'home',
+        icon: 'person',
         to: '/',
         label: 'home'
       },
@@ -69,13 +69,18 @@ export default {
         separator: true
       },
       {
-        icon: 'work',
-        to: '/Rhymes',
+        icon: 'book',
+        to: '/rim',
         label: 'rhymingDictionary.title'
       },
       {
-        icon: 'book',
-        to: '/Poems',
+        icon: 'all_inclusive',
+        to: '/anagram',
+        label: 'anagrams.title'
+      },
+      {
+        icon: 'text_snippet',
+        to: '/poems',
         label: 'poemGenerator.title'
       }
       ],

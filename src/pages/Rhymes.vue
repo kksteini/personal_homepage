@@ -1,10 +1,10 @@
 <template>
     <div class="column q-pa-xl">
       <div class="text-h4 text-center q-pt-lg" v-if="halfrim">
-        Engin alrím fundust, sýni hálfrím
+        {{ $t('rhymingDictionary.noComplete') }}
       </div>
 
-      <q-input class="col rhyme-input" v-model="text" label="Rímorð" @keyup.enter="updateRhymes(text)">
+      <q-input class="col rhyme-input" v-model="text" :label="$t('rhymingDictionary.rhymeQuery')" @keyup.enter="updateRhymes(text)">
         <template v-slot:append>
           <q-icon v-if="text !== ''" name="close" @click="text = ''; resetState()" class="cursor-pointer" />
         </template>
@@ -23,11 +23,11 @@
       </div>
 
       <div class="text-h4 text-center q-pt-md" v-if="nores">
-        Engar niðurstöður
+        {{ $t('rhymingDictionary.noResults') }}
       </div>
 
       <div v-else v-for="(items, syllables) in rhymes" :key=syllables>
-        <div class="text-h2 text-center q-pt-xl"> {{ syllables }} sérhljóð{{syllables == 1 ? 'i' : 'ar'}}</div>
+        <div class="text-h2 text-center q-pt-xl"> {{ syllables }} {{ $t('rhymingDictionary.syllabl') }}{{syllables == 1 ? $t('rhymingDictionary.sing') : $t('rhymingDictionary.plur')}}</div>
         <div class="row justify-center">
           <div class="col-md-auto q-pa-xs text-h5" v-for="item in items" :key="item">
             {{ item }}

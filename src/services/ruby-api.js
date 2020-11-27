@@ -19,8 +19,13 @@ function getHaiku() {
   return afetch('/poems/haiku')
 }
 
+function getAnagrams(sentence) {
+  return afetch(`/anagrams/${sentence}`)
+}
+
 export {
   getRhymes,
   getPoem,
-  getHaiku
+  getHaiku,
+  getAnagrams
 }
