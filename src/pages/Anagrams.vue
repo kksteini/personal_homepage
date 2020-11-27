@@ -19,7 +19,7 @@
         </q-card>
       </q-dialog>
 
-      <q-input class="col anagram-input" v-model="text" :label="$t('anagrams.query')" @keyup.enter="updateGrams(text)" maxlength="30">
+      <q-input class="col q-mb-lg anagram-input" v-model="text" :label="$t('anagrams.query')" @keyup.enter="updateGrams(text)" maxlength="30">
         <template v-slot:append>
           <q-icon v-if="text !== ''" name="close" @click="text = ''; resetState()" class="cursor-pointer" />
         </template>
@@ -43,8 +43,8 @@
 
       <div v-else v-for="sentence in grams" :key=sentence>
         <div class="row justify-center">
-          <div class="col-md-auto q-pa-xs text-h5" v-for="word in sentence" :key="word">
-            {{ word }}
+          <div class="col-md-auto q-pa-xs text-h5">
+            {{ sentence.join(" ") }}
           </div>
         </div>
       </div>
