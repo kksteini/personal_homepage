@@ -2,6 +2,7 @@ export default {
   home: 'Um mig',
   computerScientist: 'Tölvunarfræðingur',
   cv: {
+    get: 'Hlaða niður ferilskrá',
     education: {
       title: 'Menntun',
 

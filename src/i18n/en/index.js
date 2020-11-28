@@ -2,6 +2,7 @@ export default {
   home: 'About me',
   computerScientist: 'Computer scientist',
   cv: {
+    get: 'Download my cv',
     education: {
       title: 'Education',
 

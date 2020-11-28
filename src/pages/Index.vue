@@ -1,16 +1,6 @@
 <template>
   <div class="flex flex-center column q-pa-md">
-      <!--
-      <div class="col text-h3 text-center">Þorsteinn Sævar Kristjánsson</div>
-      <div class="q-mb-lg col text-h5 text-center">{{ $t('computerScientist') }}</div>
-      <div class="col text-center q-mt-lg">
-        <q-btn color="secondary">
-          <a class="q-btn" href="cv.pdf" download="cv.pdf">
-            {{ $t('cv') }}
-          </a>
-        </q-btn>
-     </div>
-     -->
+
     <div v-for="cv in cvList" :key="cv.title" class="cv-container full-width">
       <div class="col text-h3 text-center q-ma-lg">{{ $t(cv.title) }}</div>
       <div class="row full-width q-col-gutter-md">
@@ -35,7 +25,13 @@
         </div>
       </div>
     </div>
-
+    <div class="col text-center q-mt-lg">
+      <q-btn color="secondary">
+        <a class="q-btn" href="cv.pdf" download="cv.pdf">
+          {{ $t('cv.get') }}
+        </a>
+      </q-btn>
+    </div>
   </div>
 </template>
 
