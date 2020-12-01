@@ -45,7 +45,7 @@
               class="slider"
               v-model="slider"
               :min="4"
-              :max="20"
+              :max="10"
               :step="1"
               :label-value="slider + ' ' + $t('poemGenerator.syllables')"
               label
