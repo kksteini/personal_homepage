@@ -47,7 +47,9 @@ export default {
     new: 'Nýtt ljóð',
     four: 'Jöfn ferskeytla',
     haiku: 'Haiku',
-    syllables: 'atkvæði'
+    syllables: 'atkvæði',
+    aboutTitle: 'Um ljóðaskaparann',
+    about: 'Ég skrapaði allar smásögurnar af huga.is með beautifulsoup. Þessum smásögum er síðan hlaðið inn í Markov-keðju \'generator\'. Fyrir ferskeytlurnar nota ég síðan rímorðaskriftuna mína til að bera kennsl á rímorð í enda setninga. Sökum uppruna efnisins verða ljóðin misgóð'
   },
 
   rhymingDictionary: {
@@ -57,7 +59,9 @@ export default {
     rhymeQuery: 'Rímorð',
     syllabl: 'sérhljóð',
     plur: 'ar',
-    sing: 'i'
+    sing: 'i',
+    aboutTitle: 'Um rímorðabókina',
+    about: 'Sláðu inn orð til að finna rímorðin fyrir það. Ég skrifaði skriftu til að greina rætur orða m.t.t íslenskra sérhljóða. Ég setti síðan upp gagnagrunn með fyrirfram reiknuðum rótum. Þessar rætur eru bornar saman og þannig fást rímorð. Orðabókin sem ég notaði var fengin af foo.is/ord'
   },
 
   anagrams: {
@@ -65,6 +69,6 @@ export default {
     nores: 'Engar niðurstöður',
     query: 'Finna endurumraðanir fyrir...',
     aboutTitle: 'Um endurumraðanir',
-    about: 'Skrifaðu inn setningu að hámarki 30 stafir að lengd. Forritið mun reyna að búa til nýjar setningar sem innihalda alla sömu stafina. Útkomurými er stórt og þess vegna ræðst forritið á vandamálið á handahófskenndan máta. Hægt er að prófa aftur fyrir sömu setningu og fá mismunandi reiknaðar niðurstöður.'
+    about: 'Skrifaðu inn setningu að hámarki 30 stafir að lengd. Forritið mun reyna að búa til nýjar setningar sem innihalda alla sömu stafina. Útkomurými er stórt og þess vegna ræðst forritið á vandamálið á handahófskenndan máta. Hægt er að prófa aftur fyrir sömu setningu og fá mismunandi reiknaðar niðurstöður'
   }
 }

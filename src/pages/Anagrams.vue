@@ -1,24 +1,7 @@
 <template>
-
   <div class="page">
-   <q-btn @click="help = true" round color="primary" class="help-button" icon="help" />
+    <help-button title="anagrams.aboutTitle" body="anagrams.about" />
     <div class="column q-pa-xl">
-      <q-dialog class="help-modal" v-model="help">
-        <q-card>
-          <q-card-section>
-            <div class="text-h6">{{ $t('anagrams.aboutTitle') }}</div>
-          </q-card-section>
-
-          <q-card-section class="q-pt-none">
-            {{ $t('anagrams.about') }}
-          </q-card-section>
-
-          <q-card-actions align="right">
-            <q-btn flat label="OK" color="secondary" v-close-popup />
-          </q-card-actions>
-        </q-card>
-      </q-dialog>
-
       <q-input class="col q-mb-lg anagram-input" v-model="text" :label="$t('anagrams.query')" @keyup.enter="updateGrams(text)" maxlength="30">
         <template v-slot:append>
           <q-icon v-if="text !== ''" name="close" @click="text = ''; resetState()" class="cursor-pointer" />
@@ -48,22 +31,24 @@
           </div>
         </div>
       </div>
-   </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { getAnagrams } from '../services/ruby-api'
+import HelpButton from '../components/HelpButton'
 export default {
   name: 'Anagrams',
+  components: {
+    HelpButton
+  },
   data() {
     return {
       grams: [],
       text: '',
       loading: false,
-      nores: false,
-      help: false
-
+      nores: false
     }
   },
   methods: {
@@ -119,16 +104,4 @@ export default {
     position: relative;
   }
 
-  .help-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-
-  .help-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-  }
 </style>

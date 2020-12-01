@@ -1,5 +1,6 @@
 <template>
-    <div class="column q-pa-xl">
+    <div class="page column q-pa-xl">
+      <help-button title="rhymingDictionary.aboutTitle" body="rhymingDictionary.about" />
       <div class="text-h4 text-center q-pt-lg" v-if="halfrim">
         {{ $t('rhymingDictionary.noComplete') }}
       </div>
@@ -38,9 +39,13 @@
 </template>
 
 <script>
+import HelpButton from '../components/HelpButton.vue'
 import { getRhymes } from '../services/ruby-api'
 export default {
   name: 'Rhymes',
+  components: {
+    HelpButton
+  },
   data() {
     return {
       rhymes: [],
@@ -86,5 +91,9 @@ export default {
 
   .rhyme-input {
     font-size: 1.75em;
+  }
+
+  .page {
+    position: relative;
   }
 </style>

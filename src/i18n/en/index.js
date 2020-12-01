@@ -47,7 +47,9 @@ export default {
     new: 'New poem',
     four: 'Four bars',
     haiku: 'Haiku',
-    syllables: 'syllables'
+    syllables: 'syllables',
+    aboutTitle: 'About the poem generator',
+    about: 'I scraped all the short stories off of hugi.is. These short stories are then loaded into a Markov-chain generator. For the even bars I use my rhyming root script to identify rhymes at the end of sentences. Due to the material\'s origin, the poems will vary in quality'
   },
 
   rhymingDictionary: {
@@ -57,7 +59,9 @@ export default {
     rhymeQuery: 'Rhyme query',
     syllabl: 'syllable',
     plur: 's',
-    sing: ''
+    sing: '',
+    aboutTitle: 'About the rhyming dictionary',
+    about: 'Enter an icelandic word to find rhymes for it. I wrote a script to analyze the roots of words with regards to icelandic syllables. I then populated a database with these roots so that a search can be made against this pre-cooked database. This sufficiently creates a basic rhyming dictionary in icelandic. The dictionary was downloaded from foo.is/ord'
   },
 
   anagrams: {
@@ -65,6 +69,6 @@ export default {
     nores: 'No results',
     query: 'Find anagrams for...',
     aboutTitle: 'About anagrams',
-    about: 'Write a sentence, max 30 characters long. The program will attempt to create new sentences that contain all the same letters. The search space becomes large quickly and therefore the program handles results in a random manner. This means that you can try again for the same sentence and get different results.'
+    about: 'Write a sentence, max 30 characters long. The program will attempt to create new sentences that contain all the same letters. The search space becomes large quickly and therefore the program handles results in a random manner. This means that you can try again for the same sentence and get different results'
   }
 }
