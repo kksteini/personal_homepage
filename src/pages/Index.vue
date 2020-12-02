@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="column flex-center text-center full-width q-mt-lg">
+    <div class="column flex-center text-center full-width q-mt-lg q-mb-lg">
       <q-btn color="secondary">
         <a class="q-btn" href="cv.pdf" download="cv.pdf">
           {{ $t('cv.get') }}
