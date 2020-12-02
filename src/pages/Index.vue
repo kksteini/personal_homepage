@@ -1,10 +1,9 @@
 <template>
-  <div class="flex flex-center column q-pa-md">
-
-    <div v-for="cv in cvList" :key="cv.title" class="cv-container full-width">
+  <div class="row flex q-pt-lg">
+    <div v-for="cv in cvList" :key="cv.title" class="col-lg-6">
       <div class="col text-h3 text-center q-ma-lg">{{ $t(cv.title) }}</div>
-      <div class="row full-width q-col-gutter-md">
-        <div v-for="item in cv.items" :key="item"  class="col-xs-12 col-md-6 col-lg-6 flex">
+      <div class="row full-width q-pa-lg q-col-gutter-md">
+        <div v-for="item in cv.items" :key="item"  class="col-12 flex">
           <q-card class="fit cv-card">
             <q-card-section>
               <div class="text-h6">
@@ -25,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="col text-center q-mt-lg">
+    <div class="column flex-center text-center full-width q-mt-lg">
       <q-btn color="secondary">
         <a class="q-btn" href="cv.pdf" download="cv.pdf">
           {{ $t('cv.get') }}

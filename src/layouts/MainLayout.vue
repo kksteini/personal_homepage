@@ -10,7 +10,7 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-        <q-toolbar-title/>
+        <q-toolbar-title>Munum að vera kurteis</q-toolbar-title>
         <div>
           <q-btn flat @click="setLang('is')">IS</q-btn>
           <q-btn flat @click="setLang('en')">EN</q-btn>
