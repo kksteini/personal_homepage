@@ -42,7 +42,7 @@
                 {{ $t(menuItem.label) }}
               </q-item-section>
             </q-item>
-            <q-separator :key="'sep' + index"  v-else />
+            <q-separator class="q-mt-sm q-mb-sm" :key="'sep' + index" size="2px" v-else />
           </template>
         </q-list>
       </q-scroll-area>
@@ -64,6 +64,11 @@ export default {
         icon: 'person',
         to: '/',
         label: 'home'
+      },
+      {
+        icon: 'rowing',
+        to: '/skills',
+        label: 'skills.title'
       },
       {
         separator: true

@@ -70,5 +70,9 @@ export default {
     query: 'Finna endurumraðanir fyrir...',
     aboutTitle: 'Um endurumraðanir',
     about: 'Skrifaðu inn setningu að hámarki 30 stafir að lengd. Forritið mun reyna að búa til nýjar setningar sem innihalda alla sömu stafina. Útkomurými er stórt og þess vegna ræðst forritið á vandamálið á handahófskenndan máta. Hægt er að prófa aftur fyrir sömu setningu og fá mismunandi reiknaðar niðurstöður'
+  },
+
+  skills: {
+    title: 'Hæfileikar'
   }
 }

@@ -7,7 +7,8 @@ const routes = [
       { path: '/', component: () => import('pages/Index.vue') },
       { path: 'rim', component: () => import('pages/Rhymes.vue') },
       { path: 'poems', component: () => import('pages/Poems.vue') },
-      { path: 'anagram', component: () => import('pages/Anagrams.vue') }
+      { path: 'anagram', component: () => import('pages/Anagrams.vue') },
+      { path: 'skills', component: () => import('pages/Skills.vue') }
     ]
   },
 
