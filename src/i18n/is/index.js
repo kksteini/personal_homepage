@@ -73,6 +73,20 @@ export default {
   },
 
   skills: {
-    title: 'Hæfileikar'
+    title: 'Hæfileikar',
+
+    programming: 'Forritun',
+    frameworks: 'Forritunarrammar',
+    other: 'Annað',
+
+    // Other talents after this comment
+    Drums: 'Trommur',
+    Piano: 'Píanó',
+    DAW: 'DAW',
+    VA: 'Raddleikur og upplestur',
+    Stargazing: 'Stjörnuskoðunar-leiðsögumaður',
+    Singing: 'Söngur',
+    Bricking: 'Brikka tölvuna við að distrohoppa ;)',
+    Server: 'Umsjón netþjóna'
   }
 }

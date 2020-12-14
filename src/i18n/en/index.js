@@ -73,6 +73,20 @@ export default {
   },
 
   skills: {
-    title: 'Skills'
+    title: 'Skills',
+
+    programming: 'Programming',
+    frameworks: 'Frameworks',
+    other: 'Other',
+
+    // Other talents after this comment
+    Drums: 'Drums',
+    Piano: 'Piano',
+    DAW: 'DAW',
+    VA: 'Voice acting and narration',
+    Stargazing: 'Stargazing guide',
+    Singing: 'Singing',
+    Bricking: 'Brick my PC with distrohopping ;)',
+    Server: 'Server management'
   }
 }

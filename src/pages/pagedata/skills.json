@@ -1,8 +1,40 @@
 {
-    "programming": {
-        "title": "skills.programming.title",
-        "items": [
-            { "title": "skills.programming.java", "skill": 0.7 }
-        ]
-    }
+    "programming": [
+        ["Javascript", 8.5],
+        ["Python", 8.5],
+        ["Ruby", 8.5],
+        ["CSS & HTML", 7.75],
+        ["C#", 7],
+        ["C++", 7],
+        ["Dart", 7],
+        ["Java", 7],
+        ["Bash", 6.5],
+        ["C", 6],
+        ["PHP", 6]
+    ],
+
+    "frameworks": [
+        ["Node", 8.5],
+        ["Vue", 8.5],
+        ["Quasar", 8],
+        ["Django", 8],
+        ["Rails", 8],
+        ["Flutter", 7.25],
+        ["Docker", 7],
+        ["React", 6.5],
+        ["Dotnet Core", 6.25],
+        ["React native", 6],
+        ["Java Spring", 5]
+    ],
+
+    "other": [
+        ["skills.Bricking", 10],
+        ["skills.Server", 9],
+        ["skills.Piano", 8],
+        ["skills.VA", 8],
+        ["skills.DAW", 7.5],
+        ["skills.Drums", 7],
+        ["skills.Singing", 6],
+        ["skills.Stargazing", 5.5]
+    ]
 }
