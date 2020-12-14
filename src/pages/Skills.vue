@@ -22,9 +22,9 @@
           <q-tab-panel name="programming">
             <div v-for="skill in skills.programming" :key="skill[0]" class="q-mb-sm">
               <q-linear-progress rounded size="40px" :value="skill[1] * 0.1" color="secondary">
-                <div class="absolute-full q-pl-md">
-                  <div class="skill-text">
-                    {{ skill[0] }}
+                <div class="absolute-full flex q-pl-md">
+                  <div class="full-height skill-text row justify-center">
+                    <p>{{ skill[0] }}</p>
                   </div>
                 </div>
               </q-linear-progress>
@@ -34,9 +34,9 @@
           <q-tab-panel name="frameworks">
             <div v-for="skill in skills.frameworks" :key="skill[0]" class="q-mb-sm">
               <q-linear-progress rounded size="40px" :value="skill[1] * 0.1" color="secondary">
-                <div class="absolute-full q-pl-md">
-                  <div class="skill-text">
-                    {{ skill[0] }}
+                <div class="absolute-full flex q-pl-md">
+                  <div class="full-height skill-text row justify-center">
+                    <p>{{ skill[0] }}</p>
                   </div>
                 </div>
               </q-linear-progress>
@@ -46,9 +46,9 @@
           <q-tab-panel name="other">
             <div v-for="skill in skills.other" :key="skill[0]" class="q-mb-sm">
               <q-linear-progress rounded size="40px" :value="skill[1] * 0.1" color="secondary">
-                <div class="absolute-full q-pl-md">
-                  <div class="skill-text">
-                    {{ $t(skill[0]) }}
+                <div class="absolute-full flex q-pl-md">
+                  <div class="full-height skill-text row justify-center">
+                    <p>{{ $t(skill[0]) }}</p>
                   </div>
                 </div>
               </q-linear-progress>
@@ -82,5 +82,15 @@ export default {
   .skill-text {
     font-size: 0.6em;
     color: $primary;
+  }
+
+  .skill-text p {
+    margin: auto 0 auto;
+  }
+
+  @media (max-width: 500px) {
+    .skill-text {
+      font-size: 0.4em;
+    }
   }
 </style>
