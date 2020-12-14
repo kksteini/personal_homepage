@@ -119,7 +119,7 @@ module.exports = function (/* ctx */) {
       manifest: {
         name: 'Home Page',
         short_name: 'Home Page',
-        description: 'My Home Page',
+        description: 'Þorstein\'s homepage',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
