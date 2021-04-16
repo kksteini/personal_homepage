@@ -13,7 +13,7 @@ module.exports = function (/* ctx */) {
     supportTS: false,
 
     // https://quasar.dev/quasar-cli/prefetch-feature
-    // preFetch: true,
+    preFetch: true,
 
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
@@ -53,10 +53,10 @@ module.exports = function (/* ctx */) {
       // transpileDependencies: [],
 
       // rtl: false, // https://quasar.dev/options/rtl-support
-      // preloadChunks: true,
+      preloadChunks: true,
       // showProgress: false,
-      // gzip: true,
-      // analyze: true,
+      gzip: true,
+      analyze: true,
 
       // Options below are automatically set depending on the env, set them if you want to override
       // extractCSS: false,
@@ -74,7 +74,7 @@ module.exports = function (/* ctx */) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
-      https: false,
+      https: true,
       port: 8080,
       open: true // opens browser window automatically
     },
