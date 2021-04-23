@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     fetchPoem() {
-      this.res = Math.ceil(Math.random() * 20)
+      this.res = Math.ceil(Math.random() * this.slider)
     }
   }
 }
