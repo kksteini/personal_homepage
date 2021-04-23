@@ -9,6 +9,7 @@ const routes = [
       { path: 'poems', component: () => import('pages/Poems.vue') },
       { path: 'anagram', component: () => import('pages/Anagrams.vue') },
       { path: 'skills', component: () => import('pages/Skills.vue') }
+      { path: 'dice', component: () => import('pages/Dice.vue') }
     ]
   },
 
