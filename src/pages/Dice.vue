@@ -14,7 +14,7 @@
         <q-slider
               class="slider"
               v-model="slider"
-              :min="3"
+              :min="1"
               :max="20"
               :step="1"
               :label-value="'d' + slider.toString()"
