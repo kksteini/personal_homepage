@@ -1,4 +1,4 @@
-# Home Page (homepage)
+# Home Page
 
 My Home Page
 
