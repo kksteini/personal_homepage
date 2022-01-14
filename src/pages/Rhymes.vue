@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     async updateRhymes(word) {
-      window.plausible('Search Query', { props: { query: word } })
+      window.plausible('Search Query', { props: { query: word, source: 'Rhymes' } })
       this.loading = true
       var rhymes = await getRhymes(word)
       this.nores = rhymes === 'Engar niðurstöður'

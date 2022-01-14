@@ -53,6 +53,8 @@ export default {
   },
   methods: {
     async updateGrams(sentence) {
+      window.plausible('Search Query', { props: { query: sentence, source: 'Anagrams' } })
+
       this.nores = false
 
       if(sentence.length === 0) {
