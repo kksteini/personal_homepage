@@ -33,7 +33,6 @@ export default {
         year: 'síðan í Maí 2021',
         body: 'Þróaði sjálfsafgreiðslulausnir fyrir Stafrænt Ísland. Þróun og viðhald á bakendalausnum fyrir viðskiptavini, umsýsla skýjainfrastrúktúrs, gott gagnagrunnsgrín, API hönnun og afkastastilling leitarvéla. Alveg ótrúlega margt og meira sem ekki er upptalið.'
       },
-      
       showdeck: {
         title: 'Full Stack Developer hjá Showdeck',
         year: 'Júní 2020 - September 2020',
