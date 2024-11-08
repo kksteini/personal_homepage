@@ -28,6 +28,12 @@ export default {
     work: {
       title: 'Work Experience',
 
+      juni: {
+        title: 'Backend Engineer at Júní Digital',
+        year: 'From May 2021',
+        body: 'Development of Self Service Solutions for Digital Iceland. Maintenance and development of backend systems for customers, everything from cloud infrastructure management, database gymnastics, API design and search engine performance tuning. Impossibly many things, far too many to list here'
+      },
+      
       showdeck: {
         title: 'Full Stack Developer at Showdeck',
         year: 'June 2020 - September 2020',
