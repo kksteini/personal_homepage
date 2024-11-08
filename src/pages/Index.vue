@@ -51,6 +51,7 @@ export default {
         {
           title: 'cv.work.title',
           items: [
+            'cv.work.juni',
             'cv.work.showdeck',
             'cv.work.assistant'
           ]
